@@ -89,7 +89,7 @@ xset s noblank &
 
 # ---------- Xresources 主题 ----------
 # nord tokyonight gruvbox mint-y-teal dwm 2b
-THEME="tokyonight"
+THEME="nord"
 if [ -f "$HOME/.Xresources.d/${THEME}" ]; then
    xrdb -merge "$HOME/.Xresources.d/${THEME}"
 fi
@@ -105,6 +105,9 @@ ln -sf "$HOME/.config/dunst/${THEME}" "$HOME/.config/dunst/dunstrc" 2>/dev/null 
 
 # ---------- Yazi 主题 ----------
 ln -sf "$HOME/.config/yazi/themes/${THEME}.toml" "$HOME/.config/yazi/theme.toml" 2>/dev/null || true
+
+# ---------- OXWM 主题 ----------
+ln -sf "$HOME/.config/oxwm/themes/${THEME}.lua" "$HOME/.config/oxwm/colors.lua" 2>/dev/null || true
 
 # ---------- 显示器设置 ----------
 if command -v xrandr >/dev/null; then

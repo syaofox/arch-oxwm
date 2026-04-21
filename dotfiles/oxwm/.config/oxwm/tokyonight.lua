@@ -1,4 +1,4 @@
-local colors = {
+return {
     fg = "#bbbbbb",
     red = "#f7768e",
     bg = "#1a1b26",
@@ -10,5 +10,3 @@ local colors = {
     blue = "#6dade3",
     purple = "#ad8ee6",
 }
-
-return colors
