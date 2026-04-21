@@ -275,6 +275,12 @@ oxwm.key.bind({ modkey }, "Q", oxwm.client.kill())
 
 -- Custom bind
 oxwm.key.bind({ "Control", "Mod1" }, "Delete", oxwm.spawn({ "sh", "-c", "sysact.sh" }))
+
+-- Volume controls
+oxwm.key.bind({}, "XF86AudioLowerVolume", oxwm.spawn({ "sh", "-c", "volume.sh down" }))
+oxwm.key.bind({}, "XF86AudioRaiseVolume", oxwm.spawn({ "sh", "-c", "volume.sh up" }))
+oxwm.key.bind({}, "XF86AudioMute", oxwm.spawn({ "sh", "-c", "volume.sh mute" }))
+
 oxwm.key.bind({ modkey, }, "W", oxwm.spawn({ "sh", "-c", "run-browser.sh" }))
 oxwm.key.bind({ modkey, "Shift" }, "W", oxwm.spawn({ "sh", "-c", "rofi-websites.sh" }))
 oxwm.key.bind({ modkey, "Shift" }, "H", oxwm.spawn({ "sh", "-c", "change-wallpaper.sh" }))
