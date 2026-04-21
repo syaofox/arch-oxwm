@@ -60,7 +60,7 @@ trap cleanup INT TERM
 # ----------------------------------------------------------------------
 SELECTIVE_MODE=false
 INTERACTIVE_MODE=true
-DOTFILES_PACKAGES=(oxwm scripts dunst picom rofi nemo x11 fontconfig wezterm yazi bashrc)
+DOTFILES_PACKAGES=(oxwm scripts dunst picom rofi nemo fontconfig wezterm yazi bashrc)
 TEMP_DIRS=(oxwm bulky)
 
 [[ "$EUID" -eq 0 ]] && { echo -e "${RED}Do not run this script as root${NC}"; exit 1; }
@@ -218,7 +218,7 @@ step_deps() {
         local old_pwd="$PWD"
         cd /tmp || return 1
         sudo pacman -S --needed --noconfirm base-devel git || return 1
-        git clone https://aur.archlinux.org/paru.git
+        git clone https://aur.archlinux.org/paru.gite
         cd paru || return 1
         makepkg -si --noconfirm || return 1
         cd "$old_pwd"
