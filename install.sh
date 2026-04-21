@@ -1,5 +1,5 @@
 #!/bin/bash
-# Arch Linux DWM Installer (Pure Bash Version)
+# Arch Linux OXWM Installer (Pure Bash Version)
 # Run as normal user, uses sudo only when needed
 
 set -uo pipefail
@@ -21,9 +21,9 @@ log_step()  { echo -e "\n${CYAN}==> $1${NC}"; }
 # ----------------------------------------------------------------------
 # 日志系统
 # ----------------------------------------------------------------------
-if [[ -z "${DWM_INSTALL_LOG:-}" ]]; then
-    export DWM_INSTALL_LOG=1
-    LOG_DIR="$HOME/.dwm_install_logs"
+if [[ -z "${OXWM_INSTALL_LOG:-}" ]]; then
+    export OXWM_INSTALL_LOG=1
+    LOG_DIR="$HOME/.oxwm_install_logs"
     mkdir -p "$LOG_DIR"
     LOG_FILE="$LOG_DIR/install_$(date +%Y%m%d_%H%M%S).log"
 
@@ -34,7 +34,7 @@ if [[ -z "${DWM_INSTALL_LOG:-}" ]]; then
     exec > >(tee /dev/tty | clean_for_log >> "$LOG_FILE") 2>&1
 
     echo "=========================================="
-    echo "DWM Installation Log (plain text)"
+    echo "OXWM Installation Log (plain text)"
     echo "Log file: $LOG_FILE"
     echo "=========================================="
 fi
@@ -595,7 +595,7 @@ get_password_hash() {
 
 echo "----------------------------------------"
 echo "  Welcome, $USER"
-echo "  Please enter your password to start DWM"
+echo "  Please enter your password to start OXWM"
 echo "----------------------------------------"
 
 PASSWD_HASH=$(get_password_hash)
@@ -609,7 +609,7 @@ while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
     read -s -p "Password: " INPUT_PW
     echo
     if echo "$INPUT_PW" | su - "$USER" -c "exit" 2>/dev/null; then
-        echo "Login successful. Starting DWM..."
+        echo "Login successful. Starting OXWM..."
         exec startx
     else
         echo "Login incorrect."
@@ -785,7 +785,7 @@ main_menu() {
     while true; do
         echo ""
         echo "=============================================="
-        echo "       DWM Installation Wizard (Arch Linux)"
+        echo "      OXWM Installation Wizard (Arch Linux)"
         echo "=============================================="
         echo ""
         echo "Please select an operation mode:"
@@ -827,12 +827,12 @@ full_install() {
     echo "* Wallpapers symlinked to ~/.config/walls/"
     echo "* File manager: Nemo"
     echo "* To switch TTY: Ctrl+Alt+F1~F6"
-    echo "* To exit DWM: pkill dwm or Mod+Shift+Q"
+    echo "* To exit DOXWM: pkill oxwm or Mod+Shift+Q"
     echo "* Config files are symlinks; after modifying project files, run:"
     echo "  bash install.sh --redeploy-dotfiles"
     echo ""
     echo "IMPORTANT: Please reboot your system for display manager changes to take effect."
-    echo "After reboot, if auto-login is configured, DWM will start automatically;"
+    echo "After reboot, if auto-login is configured, OXWM will start automatically;"
     echo "otherwise, log in on TTY1 and run startx manually."
     echo ""
     echo "Full log saved to: $LOG_FILE"

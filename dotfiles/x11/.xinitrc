@@ -28,6 +28,7 @@ systemctl --user import-environment DISPLAY XAUTHORITY 2>/dev/null || true
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export PATH="$HOME/.local/bin:$PATH"
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 export DISPLAY=:0
 export XAUTHORITY=$HOME/.Xauthority
@@ -166,4 +167,4 @@ sleep 1
 
 # ---------- 启动 DWM ----------
 log "所有组件就绪，启动 DWM..."
-exec dwm
+exec oxwm
