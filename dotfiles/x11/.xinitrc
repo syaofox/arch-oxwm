@@ -145,14 +145,14 @@ if command -v xwallpaper >/dev/null; then
     xwallpaper --zoom "$HOME/.config/walls/black-nord.png" &
 fi
 
-# 状态栏
-slstatus &
+# # 状态栏
+# slstatus &
 
-# 网络托盘图标 (NetworkManager)
-nm-applet --indicator &
+# # 网络托盘图标 (NetworkManager)
+# nm-applet --indicator &
 
-# 音量托盘图标
-pasystray &
+# # 音量托盘图标
+# pasystray &
 
 # 剪贴板历史
 xfce4-clipman &

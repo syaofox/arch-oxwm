@@ -247,7 +247,8 @@ step_deps() {
         xdg-user-dirs dconf fastfetch zenity
 
         # 终端/文件管理
-        wezterm htop pasystray timeshift mpv gpicview bash-completion trash-cli
+        wezterm htop timeshift mpv gpicview bash-completion trash-cli
+        # pasystray
 
         # 音频
         pavucontrol pamixer pipewire pipewire-pulse pipewire-alsa pipewire-jack
