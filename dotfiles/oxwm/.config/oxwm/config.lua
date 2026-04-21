@@ -267,11 +267,19 @@ oxwm.bar.set_scheme_urgent(colors.red, colors.bg, colors.red)
 
 oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 -- Launch Dmenu
-oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "~/.local/bin/func.sh menu" }))
+oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "func.sh menu" }))
 -- Copy screenshot to clipboard
 oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "screenshot.sh clip" }))
 oxwm.key.bind({ modkey , "Shift" }, "S", oxwm.spawn({ "sh", "-c", "screenshot.sh save" }))
 oxwm.key.bind({ modkey }, "Q", oxwm.client.kill())
+
+-- Custom bind
+oxwm.key.bind({ "Control", "Mod1" }, "Delete", oxwm.spawn({ "sh", "-c", "sysact.sh" }))
+oxwm.key.bind({ modkey, }, "W", oxwm.spawn({ "sh", "-c", "run-browser.sh" }))
+oxwm.key.bind({ modkey, "Shift" }, "W", oxwm.spawn({ "sh", "-c", "rofi-websites.sh" }))
+oxwm.key.bind({ modkey, "Shift" }, "H", oxwm.spawn({ "sh", "-c", "change-wallpaper.sh" }))
+
+
 
 -- Keybind overlay - Shows important keybindings on screen
 oxwm.key.bind({ modkey, "Shift" }, "Slash", oxwm.show_keybinds())
@@ -369,8 +377,6 @@ oxwm.key.bind({ modkey, "Control", "Shift" }, "6", oxwm.tag.toggletag(5))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "7", oxwm.tag.toggletag(6))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "8", oxwm.tag.toggletag(7))
 oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
-
-oxwm.key.bind({ modkey, "Shift" }, "W", oxwm.spawn({ "sh", "-c", "~/.local/bin/run-browser.sh" }))
 
 -------------------------------------------------------------------------------
 -- Advanced: Keychords
