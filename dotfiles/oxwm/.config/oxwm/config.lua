@@ -267,7 +267,7 @@ oxwm.bar.set_scheme_urgent(colors.red, colors.bg, colors.red)
 
 oxwm.key.bind({ modkey }, "Return", oxwm.spawn_terminal())
 -- Launch Dmenu
-oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "~/.local/bin/dwmcmd.sh menu" }))
+oxwm.key.bind({ modkey }, "D", oxwm.spawn({ "sh", "-c", "~/.local/bin/func.sh menu" }))
 -- Copy screenshot to clipboard
 oxwm.key.bind({ modkey }, "S", oxwm.spawn({ "sh", "-c", "screenshot.sh clip" }))
 oxwm.key.bind({ modkey , "Shift" }, "S", oxwm.spawn({ "sh", "-c", "screenshot.sh save" }))

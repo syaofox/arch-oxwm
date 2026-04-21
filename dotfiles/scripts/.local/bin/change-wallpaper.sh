@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WALLPAPER_DIR="$HOME/.config/walls"
-WALLPAPER_CONF="$HOME/.config/dwm/wallpaper.conf"
+WALLPAPER_CONF="$HOME/.config/oxwm/wallpaper.conf"
 
 if [[ ! -d "$WALLPAPER_DIR" ]]; then
     notify-send "change-wallpaper" "Wallpaper directory not found: $WALLPAPER_DIR"

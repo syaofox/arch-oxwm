@@ -1,5 +1,5 @@
 #!/bin/bash
-# 主题安装脚本 - 为 DWM 环境安装 GTK 主题和图标 (Arch Linux 适配版)
+# 主题安装脚本 - 为 OXWM 环境安装 GTK 主题和图标 (Arch Linux 适配版)
 # 支持: Mint-Y / Nordic 主题 + lxappearance 配置工具
 
 set -euo pipefail
@@ -323,7 +323,7 @@ set_nemo_default() {
 interactive_menu() {
     clear
     echo -e "${CYAN}========================================${NC}"
-    echo -e "${CYAN}       主题安装 (DWM 环境 - Arch)${NC}"
+    echo -e "${CYAN}      主题安装 (OXWM 环境 - Arch)${NC}"
     echo -e "${CYAN}========================================${NC}"
     echo ""
 

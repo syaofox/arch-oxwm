@@ -1,7 +1,6 @@
 #!/bin/bash
 # ============================================================
-# DWM 会话启动脚本 (Debian 13 版)
-# 兼容 Debian 13 + systemd 用户服务
+# OXWM 会话启动脚本 (Arch 版)
 # ============================================================
 
 # ---------- 辅助函数 ----------
@@ -41,15 +40,15 @@ export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
-export SESSION_MANAGER="${SESSION_MANAGER:-local/$(hostname):$$:dwm}"
+export SESSION_MANAGER="${SESSION_MANAGER:-local/$(hostname):$$:oxwm}"
 export TERMINAL=wezterm
 
 # ---------- 会话锁（防止重复 startx） ----------
-SESSION_LOCK="/tmp/dwm-session-${USER}.lock"
+SESSION_LOCK="/tmp/oxwm-session-${USER}.lock"
 if [ -f "$SESSION_LOCK" ]; then
     OLD_PID=$(cat "$SESSION_LOCK" 2>/dev/null)
     if kill -0 "$OLD_PID" 2>/dev/null; then
-        log "终止残留 DWM 会话 (PID: $OLD_PID)..."
+        log "终止残留 OXWM 会话 (PID: $OLD_PID)..."
         kill -TERM "$OLD_PID" 2>/dev/null || true
         sleep 1
         kill -KILL "$OLD_PID" 2>/dev/null || true
@@ -67,12 +66,12 @@ trap 'rm -f "$SESSION_LOCK"' EXIT
 
 
 # ---------- 日志 ----------
-LOGDIR="$HOME/.local/share/dwm"
-LOGFILE="$LOGDIR/dwm.log"
+LOGDIR="$HOME/.local/share/oxwm"
+LOGFILE="$LOGDIR/oxwm.log"
 mkdir -p "$LOGDIR"
 [ -f "$LOGFILE" ] && [ "$(stat -c%s "$LOGFILE")" -gt 1048576 ] && mv "$LOGFILE" "$LOGFILE.old"
 exec > >(tee -a "$LOGFILE") 2>&1
-log "=== DWM session starting (PID: $$) ==="
+log "=== OXWM session starting (PID: $$) ==="
 
 # ---------- 清理用户级残留进程 ----------
 log "清理旧会话残留的用户进程..."
@@ -165,6 +164,6 @@ xdg-user-dirs-update &
 fcitx5 -d &
 sleep 1
 
-# ---------- 启动 DWM ----------
-log "所有组件就绪，启动 DWM..."
+# ---------- 启动 OXWM ----------
+log "所有组件就绪，启动 OXWM..."
 exec oxwm
