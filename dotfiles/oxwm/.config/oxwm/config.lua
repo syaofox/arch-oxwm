@@ -24,22 +24,7 @@ local modkey = "Mod4"
 -- Terminal emulator command (defaults to alacritty)
 local terminal = "wezterm"
 
--- Color palette - customize these to match your theme
--- Alternatively you can import other files in here, such as
--- local colors = require("colors.lua") and make colors.lua a file
--- in the ~/.config/oxwm directory
-local colors = {
-    fg = "#bbbbbb",
-    red = "#f7768e",
-    bg = "#1a1b26",
-    cyan = "#0db9d7",
-    green = "#9ece6a",
-    lavender = "#a9b1d6",
-    light_blue = "#7aa2f7",
-    grey = "#bbbbbb",
-    blue = "#6dade3",
-    purple = "#ad8ee6",
-}
+local colors = require("colors")
 
 -- Workspace tags - can be numbers, names, or icons (requires a Nerd Font)
 local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
