@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Convert Image>To JPG
+Name[zh_CN]=转换图片>转换为 JPG
+Comment=Convert selected images to JPG format
+Comment[zh_CN]=将选中的图片转换为 JPG 格式
+Icon-Name=image-x-generic
+Exec=bash -c '~/.local/share/nemo/scripts/fm-convert-image.sh jpg %F'
+Selection=notnone
+Extensions=jpg;jpeg;png;gif;bmp;tiff;tif;webp;avif;ico;svg;heic;heif;

@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Move to New Folder
+Name[zh_CN]=移动到新文件夹
+Comment=Move the selected files to a new folder
+Comment[zh_CN]=将选定的文件移动到一个新的文件夹
+Icon-Name=folder-new
+Exec=bash -c '~/.local/share/nemo/scripts/fm-move-to-folder.sh %F'
+Selection=notnone
+Extensions=any;

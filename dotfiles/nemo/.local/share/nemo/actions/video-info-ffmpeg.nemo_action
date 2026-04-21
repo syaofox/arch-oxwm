@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Video Info (ffmpeg)
+Name[zh_CN]=视频信息 (ffmpeg)
+Comment=Show detailed information about the video file
+Comment[zh_CN]=显示视频文件的详细信息
+Icon-Name=video-x-generic
+Exec=bash -c 'ffmpeg -i "%f" 2>&1 | zenity --text-info --title="视频信息 - %n" --width=700 --height=500 --font="Monospace 10"'
+Selection=S
+Mimetypes=video/*;

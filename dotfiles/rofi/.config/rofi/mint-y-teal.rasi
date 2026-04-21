@@ -1,0 +1,228 @@
+/******************************************************************************
+ * ROFI Color theme
+ * User: Rasi
+ * Copyright: Rasmus Steinke
+ ******************************************************************************/
+configuration{
+    modi: ["drun", "window", "run"];
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    icon-color: "@foreground";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    display-drun: " ";
+    display-run: " ";
+    display-window: " ";
+    font: "JetBrainsMono Nerd Font Mono 10";
+    
+    //adding vim keybindings
+    kb-row-up: "Up,Control+k";
+    kb-row-left: "Left,Control+h";
+    kb-row-right: "Right,Control+l";
+    kb-row-down: "Down,Control+j";
+
+    kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
+
+    //fixing up
+    kb-remove-to-eol: "";
+    kb-move-char-back: "Control+b";
+    kb-remove-char-back: "BackSpace";
+    kb-move-char-forward: "Control+f";
+    kb-mode-complete: "Control+o";
+}
+
+* {
+    selected-normal-foreground:  #293E42;
+    foreground:                  #E4E4E4;
+    normal-foreground:           @foreground;
+    alternate-normal-background: rgba ( 41, 62, 66, 63 % );
+    red:                         rgba ( 231, 76, 60, 100 % );
+    selected-urgent-foreground:  rgba ( 231, 76, 60, 100 % );
+    blue:                        rgba ( 26, 188, 156, 100 % );
+    urgent-foreground:           rgba ( 231, 76, 60, 100 % );
+    alternate-urgent-background: rgba ( 41, 62, 66, 18 % );
+    active-foreground:           #1A8693;
+    lightbg:                     rgba ( 26, 188, 156, 100 % );
+    selected-active-foreground:  #1A8693;
+    alternate-active-background: rgba ( 41, 62, 66, 18 % );
+    background:                  #293E42;
+    bordercolor:                 rgba ( 26, 188, 156, 21 % );
+    alternate-normal-foreground: @foreground;
+    normal-background:           rgba ( 41, 62, 66, 63 % );
+    lightfg:                     rgba ( 26, 188, 156, 100 % );
+    selected-normal-background:  #1A8693;
+    border-color:                @foreground;
+    spacing:                     1;
+    separatorcolor:              rgba ( 26, 188, 156, 18 % );
+    urgent-background:           rgba ( 41, 62, 66, 15 % );
+    selected-urgent-background:  rgba ( 46, 204, 113, 100 % );
+    alternate-urgent-foreground: @urgent-foreground;
+    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-active-foreground: @active-foreground;
+    active-background:           rgba ( 41, 62, 66, 15 % );
+    selected-active-background:  rgba ( 46, 204, 113, 100 % );
+}
+
+
+
+window {
+    background-color: @background;
+    border:           0;
+    padding:          2;
+    width:            30%;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       0;
+    padding:      0;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    fixed-height: 0;
+    border:       0;
+    spacing:      3px;
+    scrollbar:    false;
+    padding:      3px;
+    columns:      3;
+    lines:        8;
+}
+element {
+    border:            0;
+    padding:           4px 6px;
+    background-color:  transparent;
+    spacing:           0;
+    margin:            2px 0px;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    margin:           0px;
+    padding:          0px;
+    border:           0;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+    color:            inherit;
+    size:             1.5em;
+    margin:           0px;
+    padding:          0px;
+    border:           0;
+}
+
+element.normal.normal {
+    background-color: @background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.normal element-icon {
+    background-color: transparent;
+    text-color:       @normal-foreground;
+}
+
+element.normal.normal element-text {
+    background-color: transparent;
+    text-color:       @normal-foreground;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.normal.active element-icon {
+    background-color: transparent;
+    text-color:       @active-foreground;
+}
+
+element.normal.active element-text {
+    background-color: transparent;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element.selected.normal element-icon {
+    background-color: transparent;
+    text-color:       @selected-normal-foreground;
+}
+
+element.selected.normal element-text {
+    background-color: transparent;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element.alternate.normal {
+    background-color: @background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       0;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    10px;
+    border:     0;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
+}

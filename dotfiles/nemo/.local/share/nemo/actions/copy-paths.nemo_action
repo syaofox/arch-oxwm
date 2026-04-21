@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Copy Paths
+Name[zh_CN]=复制路径
+Comment=Copy the full paths of selected files/folders to clipboard
+Comment[zh_CN]=复制选中文件/文件夹的完整路径到剪贴板
+Icon-Name=edit-copy
+Exec=bash -c '~/.local/share/nemo/scripts/fm-copy-paths.sh %F'
+Selection=notnone
+Extensions=any;

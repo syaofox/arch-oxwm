@@ -1,0 +1,53 @@
+! Nord Theme Colors for dwm
+! 未选中，无客户端
+dwm.col_norm_fg:        #4C566A
+dwm.col_norm_bg:        #2E3440
+dwm.col_norm_border:    #4C566A
+
+! 选中，无客户端 
+dwm.col_sel_fg:         #ECEFF4
+dwm.col_sel_bg:         #88C0D0
+dwm.col_sel_border:     #88C0D0
+
+! 未选中，有客户端
+dwm.col_occ_fg:         #FAFCFF
+dwm.col_occ_bg:         #2E3440
+dwm.col_occ_border:     #4C566A
+
+! 选中，有客户端 
+dwm.col_selocc_fg:      #FFFFFF
+dwm.col_selocc_bg:      #88C0D0
+dwm.col_selocc_border:  #88C0D0
+
+! 状态栏
+dwm.col_status_fg:      #D8DEE9
+dwm.col_status_bg:      #2E3440
+dwm.col_status_border:  #2E3440
+
+! 窗口标题区
+dwm.col_title_fg:       #FAFCFF
+dwm.col_title_bg:       #2E3440
+dwm.col_title_border:   #4C566A
+
+! 窗口标题区选中
+dwm.col_titlesel_fg:    #FFFFFF
+dwm.col_titlesel_bg:    #88C0D0
+dwm.col_titlesel_border: #2E3440
+
+! tag下划线
+dwm.col_tagunderline:   #88C0D0
+dwm.tagunderline: 0
+
+! Nord Theme Colors for slstatus
+slstatus.sep:   #4C566A
+slstatus.net:   #88C0D0
+slstatus.cpu:   #EBCB8B
+slstatus.ram:   #EBCB8B
+slstatus.gpu:   #A3BE8C
+slstatus.time:  #ECEFF4
+
+! Nord Theme Colors for slock
+slock.init:     #2E3440
+slock.input:    #BF616A
+slock.fail:     #BF616A
+slock.text:     #88C0D0

@@ -1,0 +1,5 @@
+HomePage|http://10.10.10.6:8888
+GitHub|https://github.com"       
+Arch Wiki|https://wiki.archlinux.org
+Google|https://www.google.com
+YouTube|https://www.youtube.com

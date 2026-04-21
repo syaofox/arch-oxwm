@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Convert Image>To WEBP
+Name[zh_CN]=转换图片>转换为 WEBP
+Comment=Convert selected images to WEBP format
+Comment[zh_CN]=将选中的图片转换为 WEBP 格式
+Icon-Name=image-x-generic
+Exec=bash -c '~/.local/share/nemo/scripts/fm-convert-image.sh webp %F'
+Selection=notnone
+Extensions=jpg;jpeg;png;gif;bmp;tiff;tif;webp;avif;ico;svg;heic;heif;

@@ -1,0 +1,55 @@
+! DWM Theme Colors for dwm
+
+! 选中，无客户端 
+dwm.col_norm_fg:        #444444
+dwm.col_norm_bg:        #222222
+dwm.col_norm_border:    #444444
+
+! 选中，无客户端 
+dwm.col_sel_fg:         #eeeeee
+dwm.col_sel_bg:         #005577
+dwm.col_sel_border:     #00b7ff
+
+! 未选中，有客户端
+dwm.col_occ_fg:         #ECEFF4
+dwm.col_occ_bg:         #222222
+dwm.col_occ_border:     #444444
+
+! 选中，有客户端 
+dwm.col_selocc_fg:      #FFFFFF
+dwm.col_selocc_bg:      #005577
+dwm.col_selocc_border:  #00b7ff
+
+! 状态栏
+dwm.col_status_fg:      #bbbbbb
+dwm.col_status_bg:      #222222
+dwm.col_status_border:  #222222
+
+! 窗口标题区
+dwm.col_title_fg:       #ECEFF4
+dwm.col_title_bg:       #222222
+dwm.col_title_border:   #444444
+
+! 窗口标题区选中
+dwm.col_titlesel_fg:    #FFFFFF
+dwm.col_titlesel_bg:    #005577
+dwm.col_titlesel_border: #222222
+
+! tag下划线
+dwm.col_tagunderline:   #005577
+dwm.tagunderline: 0
+
+
+! DWM Theme Colors for slstatus
+slstatus.sep:   #303030
+slstatus.net:   #f0efef
+slstatus.cpu:   #fafaaa
+slstatus.ram:   #fafaaa
+slstatus.gpu:   #b1f57d
+slstatus.time:  #FFFFFF
+
+! DWM Theme Colors for slock
+slock.init:     #222222
+slock.input:    #005577
+slock.fail:     #FF7777
+slock.text:     #00BBFF

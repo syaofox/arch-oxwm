@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Remove Duplicates
+Name[zh_CN]=删除重复项
+Comment=Check selected files and remove duplicates
+Comment[zh_CN]=校验并删除重复项
+Icon-Name=edit-clear
+Exec=bash -c '~/.local/share/nemo/scripts/fm-remove-duplicates.sh %F'
+Selection=notnone
+Extensions=any;
